@@ -1,5 +1,5 @@
 <h1>Login</h1>
-<form class="login-form" [formGroup]="loginForm">
+<form class="login-form" [formGroup]="loginForm" (ngSubmit)="loginClick()">
   <mat-form-field class="username">
     <input type="text" matInput placeholder="User Name" formControlName="usernameControl">
   </mat-form-field>
@@ -7,4 +7,6 @@
   <mat-form-field class="password">
     <input type="password" matInput placeholder="Password" formControlName="passwordControl">
   </mat-form-field>
+
+  <button mat-button type="submit">Login</button>
 </form>
